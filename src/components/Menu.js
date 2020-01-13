@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 const Header = styled.header`
-  background: ${props => props.theme.colors.base};
+  background: white;
   width: 100%;
   padding: 1.5em 0;
 `
@@ -20,7 +20,7 @@ const Nav = styled.nav`
 
   li {
     display: inline-block;
-    margin-left: 1em;
+    margin-left: 2em;
     &:first-child {
       position: relative;
       margin: 0;
@@ -32,16 +32,15 @@ const Nav = styled.nav`
     text-decoration: none;
     color: DarkGray;
     font-weight: 600;
-    transition: all 0.2s;
-    border-bottom: 2px solid ${props => props.theme.colors.base};
+    transition: all 0.24s;
     &:hover {
-      color: white;
+      color: ${props => props.theme.colors.base};
     }
   }
 `
 
 const activeLinkStyle = {
-  color: 'white',
+  color: '#121212',
 }
 
 const Menu = () => {
@@ -51,12 +50,17 @@ const Menu = () => {
         <ul>
           <li>
             <Link to="/" activeStyle={activeLinkStyle}>
-              Home
+              Annie van Noortwijk
             </Link>
           </li>
           <li>
-            <Link to="/about/" activeStyle={activeLinkStyle}>
-              About
+            <Link to="/commissioned/" activeStyle={activeLinkStyle}>
+              Commissioned
+            </Link>
+          </li>
+          <li>
+            <Link to="/personal/" activeStyle={activeLinkStyle}>
+              Personal
             </Link>
           </li>
           <li>

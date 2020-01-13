@@ -15,6 +15,8 @@ const Index = ({ data, pageContext }) => {
   const { currentPage } = pageContext
   const isFirstPage = currentPage === 1
 
+  // REMOVE ALL FEATURED POST SHIT WE DON'T NEED IT
+
   return (
     <Layout>
       <SEO />
