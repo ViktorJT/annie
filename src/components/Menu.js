@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const Header = styled.header`
   background: white;
   width: 100%;
-  padding: 1.5em 0;
+  padding: 4em 0;
 `
 const Nav = styled.nav`
   width: 100%;

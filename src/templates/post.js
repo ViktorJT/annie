@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
 import Layout from '../components/Layout'
-import Hero from '../components/Hero'
+// import Hero from '../components/Hero'
 import Container from '../components/Container'
 import PageBody from '../components/PageBody'
 import TagList from '../components/TagList'
@@ -32,14 +32,14 @@ const PostTemplate = ({ data, pageContext }) => {
       </Helmet>
       <SEO pagePath={slug} postNode={postNode} postSEO />
 
-      <Hero title={title} image={heroImage} height={'50vh'} />
+      {/* <Hero title={title} image={heroImage} height={'50vh'} /> */}
 
       <Container>
-        {tags && <TagList tags={tags} />}
-        <PostDetails
+        {/* {tags && <TagList tags={tags} />} */}
+        {/* <PostDetails
           date={publishDate}
           timeToRead={body.childMarkdownRemark.timeToRead}
-        />
+        /> */}
         <PageBody body={body} />
       </Container>
       <PostLinks previous={previous} next={next} />

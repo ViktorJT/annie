@@ -9,6 +9,9 @@ const Post = styled.li`
   padding: 4em 0;
   width: 100%;
   border-bottom: 1px solid ${props => props.theme.colors.secondary};
+  &:last-child {
+    border-bottom: none;
+  }
   a {
     display: flex;
     flex-flow: row;

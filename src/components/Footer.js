@@ -1,20 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'gatsby'
 
 const Wrapper = styled.footer`
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: flex-start;
   margin: 0 auto;
   max-width: ${props => props.theme.sizes.maxWidth};
 `
 
 const List = styled.ul`
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-flow: column wrap;
+  align-items: center;
   width: 100%;
   border-top: 1px solid ${props => props.theme.colors.secondary};
   padding: 1em 0 2em;
@@ -23,7 +21,7 @@ const List = styled.ul`
 
 const Item = styled.li`
   display: inline-block;
-  padding: 0.25em 0;
+  padding: 2em 0;
   width: 100%;
   @media screen and (min-width: ${props => props.theme.responsive.small}) {
     width: auto;
@@ -44,36 +42,8 @@ const Item = styled.li`
 const Footer = () => (
   <Wrapper>
     <List>
-      <Item>
-        <a
-          href="https://www.contentful.com/"
-          rel="nofollow noopener noreferrer"
-          target="_blank"
-        >
-          <img
-            src="https://images.ctfassets.net/fo9twyrwpveg/44baP9Gtm8qE2Umm8CQwQk/c43325463d1cb5db2ef97fca0788ea55/PoweredByContentful_LightBackground.svg"
-            style={{ width: '100px' }}
-            alt="Powered by Contentful"
-          />
-        </a>
-      </Item>
-      <Item>
-        <a
-          href="https://github.com/ryanwiemer/gatsby-starter-gcn"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          gatsby-starter-gcn
-        </a>{' '}
-        by{' '}
-        <a
-          href="https://github.com/ryanwiemer"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          @ryanwiemer
-        </a>
-      </Item>
+      <Item>Annie van Noortwijk, Ⓒ2020</Item>
+      <Link to="/contact/">contact</Link>
     </List>
   </Wrapper>
 )

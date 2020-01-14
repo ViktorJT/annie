@@ -2,10 +2,95 @@ import React from 'react'
 import styled from 'styled-components'
 require('prismjs/themes/prism.css')
 
+// Reference from the annie-static backup:
+{
+  /* <header>
+      <div class="description">
+        <h2>Project Title</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque malesuada
+          suscipit. Maecenas porttitor est interdum lorem egestas convallis. Integer ac ligula quis
+          ligula luctus rhoncus. Quisque dictum hendrerit dapibus.
+        </p>
+        <p>
+          Nam sollicitudin, risus nec vulputate faucibus, tellus est pulvinar odio, id iaculis dolor
+          nunc in nisl. Integer fringilla risus dolor, at bibendum enim dapibus vitae.
+        </p>
+      </div>
+    </header> */
+}
+
+// header,
+// nav,
+// footer {
+//   width: 100%;
+//   max-width: 1024px;
+//   margin: 0 auto;
+//   display: flex;
+//   padding: 80px 2vw 80px 2vw;
+// }
+
+// header {
+//   height: 56vh;
+//   justify-content: space-around;
+// }
+
+// .description {
+//   display: flex;
+//   flex-flow: row wrap;
+//   justify-content: space-between;
+//   align-content: space-around;
+//   width: 640px;
+// }
+
+// .description a {
+//   font-style: italic;
+//   display: inline-block;
+//   width: 100%;
+//   text-align: right;
+//   color: gray;
+// }
+
+// .description p:first-of-type {
+//   text-align: justify;
+// }
+
+// .description > p {
+//   width: 300px;
+// }
+
+// .description > h2 {
+//   width: 100%;
+//   text-align: center;
+//   text-transform: uppercase;
+//   font-size: 13px;
+// }
+
+// @media only screen and (max-width: 640px) {
+//   .description {
+//     width: 88vw;
+//   }
+
+//   .description > p,
+//   .description p:first-of-type {
+//     width: 100%;
+//     text-align: center;
+//   }
+
+//   header {
+//     height: 40vh;
+//     justify-content: space-around;
+//   }
+
+//   header {
+//     padding: 32px 2vw 32px 2vw;
+//   }
+// }
+
 const Body = styled.div`
   margin: 0 auto;
   max-width: ${props => props.theme.sizes.maxWidthCentered};
-
+  ${'' /* 
   h1,
   h2,
   h3 {
@@ -23,7 +108,7 @@ const Body = styled.div`
   }
   h3 {
     font-size: 1em;
-  }
+  } */}
 
   p {
     line-height: 1.6;
@@ -37,7 +122,7 @@ const Body = styled.div`
       color: ${props => props.theme.colors.highlight};
     }
   }
-
+  ${'' /* 
   del {
     text-decoration: line-through;
   }
@@ -94,7 +179,7 @@ const Body = styled.div`
     span {
       background: inherit !important;
     }
-  }
+  } */}
 `
 
 const PageBody = props => {

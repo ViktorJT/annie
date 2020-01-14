@@ -8,7 +8,6 @@ import Layout from '../components/Layout'
 import Card from '../components/Card'
 import CardList from '../components/CardList'
 import PageTitle from '../components/PageTitle'
-import Pagination from '../components/Pagination'
 import Container from '../components/Container'
 
 const TagTemplate = ({ data, pageContext }) => {
@@ -61,7 +60,6 @@ const TagTemplate = ({ data, pageContext }) => {
           ))}
         </CardList>
       </Container>
-      <Pagination context={pageContext} />
     </Layout>
   )
 }
