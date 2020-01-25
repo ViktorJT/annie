@@ -10,15 +10,45 @@ import TagList from '../components/TagList'
 import PostLinks from '../components/PostLinks'
 import PostDetails from '../components/PostDetails'
 import SEO from '../components/SEO'
+import Img from 'gatsby-image'
+import styled from 'styled-components'
+
+const Gallery = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  width: 92vw;
+  max-width: 1440px;
+  & div {
+    min-width: 360px;
+    padding: 2vw;
+    max-height: 80vh;
+    &:nth-of-type(3n + 1) {
+      align-self: center;
+      width: 100%;
+    }
+    &:nth-of-type(3n + 2) {
+      align-self: flex-start;
+      width: 49%;
+    }
+    &:nth-of-type(3n + 3) {
+      align-self: flex-end;
+      width: 32%;
+    }
+  }
+`
 
 const PostTemplate = ({ data, pageContext }) => {
   const {
     title,
     slug,
+    gallery,
     heroImage,
     body,
-    publishDate,
-    tags,
+    // publishDate,
+    // tags,
   } = data.contentfulPost
   const postNode = data.contentfulPost
 
@@ -33,15 +63,29 @@ const PostTemplate = ({ data, pageContext }) => {
       <SEO pagePath={slug} postNode={postNode} postSEO />
 
       {/* <Hero title={title} image={heroImage} height={'50vh'} /> */}
-
-      <Container>
-        {/* {tags && <TagList tags={tags} />} */}
-        {/* <PostDetails
+      {/* {tags && <TagList tags={tags} />} */}
+      {/* <PostDetails
           date={publishDate}
           timeToRead={body.childMarkdownRemark.timeToRead}
         /> */}
-        <PageBody body={body} />
-      </Container>
+      <PageBody body={body} />
+      <Gallery>
+        {gallery.map(item => {
+          if (item.image) {
+            return <Img fluid={item.image.fluid} />
+          } else {
+            return (
+              <div
+                dangerouslySetInnerHTML={{
+                  __html:
+                    item.childContentfulVideoEmbedCodeTextNode
+                      .childMarkdownRemark.html,
+                }}
+              />
+            )
+          }
+        })}
+      </Gallery>
       <PostLinks previous={previous} next={next} />
     </Layout>
   )
@@ -63,6 +107,22 @@ export const query = graphql`
         title
         id
         slug
+      }
+      gallery {
+        ... on ContentfulImage {
+          image {
+            fluid(maxWidth: 1440) {
+              ...GatsbyContentfulFluid_withWebp_noBase64
+            }
+          }
+        }
+        ... on ContentfulVideo {
+          childContentfulVideoEmbedCodeTextNode {
+            childMarkdownRemark {
+              html
+            }
+          }
+        }
       }
       heroImage {
         title
