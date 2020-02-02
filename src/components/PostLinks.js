@@ -12,7 +12,7 @@ const Box = styled.div`
   justify-content: space-between;
   margin: 0 auto;
   width: 100%;
-  max-width: ${props => props.theme.sizes.maxWidthCentered};
+  max-width: ${props => props.theme.sizes.maxWidth};
   a {
     background: ${props => props.theme.colors.base};
     color: white;

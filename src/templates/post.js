@@ -16,26 +16,31 @@ import styled from 'styled-components'
 const Gallery = styled.div`
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   margin: 0 auto;
   width: 92vw;
-  max-width: 1440px;
-  & div {
-    min-width: 360px;
-    padding: 2vw;
-    max-height: 80vh;
-    &:nth-of-type(3n + 1) {
-      align-self: center;
-      width: 100%;
+  max-width: ${props => props.theme.sizes.maxWidth};
+  & > * {
+    flex-basis: 32%;
+    margin: 3em 1.5em;
+    &:first-child {
+      flex-basis: 80%;
+    }
+    ${'' /* This fixes an issue where not having at least one image and one video crashes the site for some reason to do with the graphql query below, i think. */}
+    &:last-child {
+      display: none;
     }
     &:nth-of-type(3n + 2) {
-      align-self: flex-start;
-      width: 49%;
+      align-self: center;
+      flex-grow: 2;
     }
     &:nth-of-type(3n + 3) {
+      flex-grow: 3;
+      align-self: flex-start;
+    }
+    &:nth-of-type(3n + 4) {
       align-self: flex-end;
-      width: 32%;
     }
   }
 `
@@ -77,9 +82,7 @@ const PostTemplate = ({ data, pageContext }) => {
             return (
               <div
                 dangerouslySetInnerHTML={{
-                  __html:
-                    item.childContentfulVideoEmbedCodeTextNode
-                      .childMarkdownRemark.html,
+                  __html: item.embedCode.childMarkdownRemark.html,
                 }}
               />
             )
@@ -117,7 +120,7 @@ export const query = graphql`
           }
         }
         ... on ContentfulVideo {
-          childContentfulVideoEmbedCodeTextNode {
+          embedCode {
             childMarkdownRemark {
               html
             }

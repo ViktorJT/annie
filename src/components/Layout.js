@@ -6,7 +6,7 @@ import GlobalStyle from '../styles/global'
 import theme from '../styles/theme'
 import config from '../utils/siteConfig'
 import Menu from '../components/Menu'
-import Footer from '../components/Footer'
+// import Footer from '../components/Footer'
 
 const Template = ({ children }) => {
   return (
@@ -24,7 +24,7 @@ const Template = ({ children }) => {
             <Menu />
             {children}
           </div>
-          <Footer />
+          {/* <Footer /> */}
         </>
       </ThemeProvider>
       <GlobalStyle />
