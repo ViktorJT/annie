@@ -4,6 +4,7 @@ require('prismjs/themes/prism.css')
 
 const Body = styled.div`
   margin: 0 auto;
+  padding: 1.5em;
   height: 50vh;
   display: flex;
   flex-flow: column nowrap;

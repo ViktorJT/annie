@@ -5,13 +5,11 @@ import Img from 'gatsby-image'
 
 const Post = styled.li`
   position: relative;
+  display: flex;
+  flex-flow: column nowrap;
   margin: 0 0 1em 0;
   padding: 4em 0;
   width: 100%;
-  border-bottom: 1px solid ${props => props.theme.colors.secondary};
-  &:last-child {
-    border-bottom: none;
-  }
   a {
     display: flex;
     flex-flow: row;
@@ -27,17 +25,24 @@ const Post = styled.li`
 `
 
 const Title = styled.h2`
-  font-size: 1.5em;
+  display: block;
+  font-size: 1.3em;
   font-weight: 600;
   text-transform: capitalize;
   flex-basis: 50%;
+  margin-right: 1em;
+  margin-bottom: 1em;
 `
+
+// const Overlay = styled.div`
+// `
 
 const Card = ({ slug, heroImage, title, body, ...props }) => {
   return (
     <Post>
+      <Title>{title}</Title>
       <Link to={`/${slug}/`}>
-        <Title>{title}</Title>
+        {/* <Overlay>{title}</Overlay> */}
         <Img fluid={heroImage.fluid} backgroundColor={'#eeeeee'} />
       </Link>
     </Post>
