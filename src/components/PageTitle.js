@@ -6,18 +6,18 @@ const Title = styled.h1`
   text-transform: capitalize;
   font-weight: 600;
   text-align: center;
-  margin: 0 0 3rem 0;
-  margin: ${props => (props.small ? '1rem 0 4rem 0' : '0 0 3rem 0')};
+  margin: 3em 0 0 0;
   line-height: 1.2;
-  span {
-    margin: 0 0 0 0.25em;
-  }
   a {
     transition: all 0.2s;
     color: ${props => props.theme.colors.base};
     &:hover {
       color: ${props => props.theme.colors.highlight};
     }
+  }
+  @media screen and (max-width: ${props => props.theme.responsive.small}) {
+    text-align: left;
+    margin: 0 1.5em;
   }
 `
 

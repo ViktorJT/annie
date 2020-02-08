@@ -21,7 +21,7 @@ const Post = styled.li`
       z-index: 99;
       opacity: 0;
       background-color: rgba(0, 0, 0, 0);
-      color: red;
+      color: ${props => props.theme.colors.base};
       font-size: 6em;
       font-weight: 600;
       text-align: center;
@@ -42,7 +42,7 @@ const Post = styled.li`
     }
 
     &:hover img {
-      filter: blur(2px) grayscale(100%);
+      filter: grayscale(100%) opacity(50%);
     }
 
     @media screen and (max-width: ${props => props.theme.responsive.small}) {
