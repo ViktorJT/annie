@@ -6,6 +6,7 @@ import Layout from '../components/Layout'
 // import Hero from '../components/Hero'
 import Container from '../components/Container'
 import PageBody from '../components/PageBody'
+import PageTitle from '../components/PageTitle'
 import PostLinks from '../components/PostLinks'
 import PostDetails from '../components/PostDetails'
 import SEO from '../components/SEO'
@@ -79,6 +80,7 @@ const PostTemplate = ({ data, pageContext }) => {
           date={publishDate}
           timeoRead={body.childMarkdownRemark.timeToRead}
         /> */}
+      <PageTitle>{title}</PageTitle>
       <PageBody body={body} />
       <Gallery>
         {gallery.map(item => {

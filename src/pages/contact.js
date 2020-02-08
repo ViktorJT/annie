@@ -61,15 +61,17 @@ const Contact = ({ data }) => {
             creating short films on 16mm film with a Bolex camera, editing on a
             Steenbeck and working in the darkroom for the first time. It was
             here where she really fell in love with image and the different ways
-            to tell stories visually. Annie enjoys collaborating with clients to
-            create visual concepts. This process is as much a part of her work
-            as the creation of it. She is comfortable working with both digital
-            and analogue techniques and has created work for clients such as
-            Isabel Marant, Nina Ricci and Nike. Feel free to reach out for
-            inquiries.
+            to tell stories visually.
+          </p>
+          <p>
+            Annie enjoys collaborating with clients to create visual concepts.
+            This process is as much a part of her work as the creation of it.
+            She is comfortable working with both digital and analogue techniques
+            and has created work for clients such as Isabel Marant, Nina Ricci
+            and Nike. Feel free to reach out for inquiries.
           </p>
           <h3>Drop her a line</h3>
-          <p>+31 (0)6 38 33 05 45</p> <p>amvannoortwijk@gmail.com</p>{' '}
+          <p>+31 (0)6 38 33 05 45</p> <p>amvannoortwijk@gmail.com</p>
         </Body>
       </Container>
     </Layout>

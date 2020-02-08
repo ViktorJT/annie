@@ -20,10 +20,11 @@ const Post = styled.li`
     & > div:first-child {
       z-index: 99;
       opacity: 0;
-      background-color: rgba(0, 0, 0, 0.4);
-      transition: all 0.24s;
-      color: white;
-      font-size: 2em;
+      background-color: rgba(0, 0, 0, 0);
+      color: red;
+      font-size: 6em;
+      font-weight: 600;
+      text-align: center;
     }
 
     & > div {
@@ -33,15 +34,24 @@ const Post = styled.li`
       justify-content: center;
       height: 100%;
       width: 100%;
+      transition: all 0.24s;
     }
 
     &:hover > div:first-child {
       opacity: 1;
     }
 
+    &:hover img {
+      filter: blur(2px) grayscale(100%);
+    }
+
     @media screen and (max-width: ${props => props.theme.responsive.small}) {
       &:hover > div:first-child {
         opacity: 0;
+      }
+
+      &:hover img {
+        filter: blur(0px) grayscale(0);
       }
     }
   }
