@@ -6,7 +6,6 @@ import Layout from '../components/Layout'
 // import Hero from '../components/Hero'
 import Container from '../components/Container'
 import PageBody from '../components/PageBody'
-import TagList from '../components/TagList'
 import PostLinks from '../components/PostLinks'
 import PostDetails from '../components/PostDetails'
 import SEO from '../components/SEO'
@@ -71,7 +70,7 @@ const PostTemplate = ({ data, pageContext }) => {
       {/* {tags && <TagList tags={tags} />} */}
       {/* <PostDetails
           date={publishDate}
-          timeToRead={body.childMarkdownRemark.timeToRead}
+          timeoRead={body.childMarkdownRemark.timeToRead}
         /> */}
       <PageBody body={body} />
       <Gallery>

@@ -1,23 +1,13 @@
 import React from 'react'
-
 import { graphql } from 'gatsby'
-
 import orderBy from 'lodash/orderBy'
-
 import Helmet from 'react-helmet'
-
 import moment from 'moment'
-
 import config from '../utils/siteConfig'
-
 import Layout from '../components/Layout'
-
 import Card from '../components/Card'
-
 import CardList from '../components/CardList'
-
 import PageTitle from '../components/PageTitle'
-
 import Container from '../components/Container'
 
 const TagTemplate = ({ data, pageContext }) => {

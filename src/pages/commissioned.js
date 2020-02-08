@@ -10,11 +10,8 @@ import config from '../utils/siteConfig'
 
 const Index = ({ data, pageContext }) => {
   const posts = data.allContentfulPost.edges
-  // const featuredPost = posts[0].node
   const { currentPage } = pageContext
   const isFirstPage = currentPage === 1
-
-  // REMOVE ALL FEATURED POST SHIT WE DON'T NEED IT
 
   return (
     <Layout>
@@ -37,7 +34,10 @@ const Index = ({ data, pageContext }) => {
 
 export const query = graphql`
   {
-    allContentfulPost(sort: { fields: [publishDate], order: DESC }) {
+    allContentfulPost(
+      filter: { tags: { elemMatch: { slug: { eq: "commissioned" } } } }
+      sort: { fields: [publishDate], order: DESC }
+    ) {
       edges {
         node {
           title
