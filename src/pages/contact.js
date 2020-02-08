@@ -70,7 +70,6 @@ const Contact = ({ data }) => {
           </p>
           <h3>Drop her a line</h3>
           <p>+31 (0)6 38 33 05 45</p> <p>amvannoortwijk@gmail.com</p>{' '}
-          <p>instagram</p>
         </Body>
       </Container>
     </Layout>

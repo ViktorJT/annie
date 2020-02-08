@@ -25,6 +25,9 @@ const Gallery = styled.div`
     margin: 3em 1.5em;
     &:first-child {
       flex-basis: 80%;
+      @media screen and (max-width: ${props => props.theme.responsive.small}) {
+        flex-basis: 100%;
+      }
     }
     ${'' /* This fixes an issue where not having at least one image and one video crashes the site for some reason to do with the graphql query below, i think. */}
     &:last-child {
@@ -40,6 +43,10 @@ const Gallery = styled.div`
     }
     &:nth-of-type(3n + 4) {
       align-self: flex-end;
+    }
+    @media screen and (max-width: ${props => props.theme.responsive.small}) {
+      flex-basis: 100%;
+      margin: 2em 0;
     }
   }
 `

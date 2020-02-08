@@ -11,15 +11,38 @@ const Post = styled.li`
   padding: 4em 0;
   width: 100%;
   a {
-    display: flex;
-    flex-flow: row;
+    display: grid;
     height: 100%;
     width: 100%;
     color: ${props => props.theme.colors.base};
     text-decoration: none;
-    .gatsby-image-wrapper {
+
+    & > div:first-child {
+      z-index: 99;
+      opacity: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      transition: all 0.24s;
+      color: white;
+      font-size: 2em;
+    }
+
+    & > div {
+      grid-area: 1 / 1 / 2 / 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       height: 100%;
       width: 100%;
+    }
+
+    &:hover > div:first-child {
+      opacity: 1;
+    }
+
+    @media screen and (max-width: ${props => props.theme.responsive.small}) {
+      &:hover > div:first-child {
+        opacity: 0;
+      }
     }
   }
 `
@@ -32,17 +55,19 @@ const Title = styled.h2`
   flex-basis: 50%;
   margin-right: 1em;
   margin-bottom: 1em;
+  @media screen and (min-width: ${props => props.theme.responsive.small}) {
+    display: none;
+  }
 `
 
-// const Overlay = styled.div`
-// `
+const Overlay = styled.div``
 
 const Card = ({ slug, heroImage, title, body, ...props }) => {
   return (
     <Post>
       <Title>{title}</Title>
       <Link to={`/${slug}/`}>
-        {/* <Overlay>{title}</Overlay> */}
+        <Overlay>{title}</Overlay>
         <Img fluid={heroImage.fluid} backgroundColor={'#eeeeee'} />
       </Link>
     </Post>
