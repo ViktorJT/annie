@@ -50,7 +50,7 @@ const Post = styled.li`
 const Title = styled.h2`
   display: block;
   font-size: 1.3em;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: capitalize;
   flex-basis: 50%;
   margin-right: 1em;
@@ -66,7 +66,7 @@ const Overlay = styled.div`
   background-color: rgba(0, 0, 0, 0);
   color: ${props => props.theme.colors.base};
   font-size: 6em;
-  font-weight: 600;
+  font-weight: 500;
   text-align: center;
 `
 

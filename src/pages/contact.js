@@ -18,7 +18,7 @@ const Body = styled.div`
   max-width: ${props => props.theme.sizes.maxWidthCentered};
   h3 {
     margin-bottom: 1em;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   p {

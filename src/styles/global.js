@@ -1,6 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css?family=Encode+Sans:300,600&display=swap');
+  
   /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -89,8 +91,8 @@ const GlobalStyle = createGlobalStyle`
     font-variant-ligatures: none;
     text-rendering: optimizeLegibility;
     text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
-    font-weight: 400;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 300;
+    font-family: 'Encode Sans', Helvetica;
   }
 
   img {

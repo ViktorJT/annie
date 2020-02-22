@@ -11,6 +11,9 @@ const Body = styled.div`
   justify-content: center;
   align-items: center;
   max-width: ${props => props.theme.sizes.maxWidthCentered};
+  @media screen and (max-width: ${props => props.theme.responsive.small}) {
+    height: auto;
+  }
   p {
     line-height: 1.6;
     margin: 0 0 2em 0;
