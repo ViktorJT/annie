@@ -18,6 +18,7 @@ const Nav = styled.nav`
   margin: 0 auto;
   padding: 0 1.5em;
   display: flex;
+  font-weight: 600;
   justify-content: space-between;
 
   @media screen and (max-width: ${props => props.theme.responsive.small}) {
