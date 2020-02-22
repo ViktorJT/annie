@@ -11,24 +11,14 @@ const Post = styled.li`
   padding: 4em 0;
   width: 100%;
   a {
-    display: grid;
+    position: relative;
     height: 100%;
     width: 100%;
     color: ${props => props.theme.colors.base};
     text-decoration: none;
 
-    & > div:first-child {
-      z-index: 99;
-      opacity: 0;
-      background-color: rgba(0, 0, 0, 0);
-      color: ${props => props.theme.colors.base};
-      font-size: 6em;
-      font-weight: 600;
-      text-align: center;
-    }
-
     & > div {
-      grid-area: 1 / 1 / 2 / 2;
+      position: absolute;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -70,7 +60,15 @@ const Title = styled.h2`
   }
 `
 
-const Overlay = styled.div``
+const Overlay = styled.div`
+  z-index: 99;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0);
+  color: ${props => props.theme.colors.base};
+  font-size: 6em;
+  font-weight: 600;
+  text-align: center;
+`
 
 const Card = ({ slug, heroImage, title, body, ...props }) => {
   return (

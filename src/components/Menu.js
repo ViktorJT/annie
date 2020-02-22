@@ -29,7 +29,7 @@ const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
     @media screen and (max-width: ${props => props.theme.responsive.small}) {
-      width: 320px;
+      width: 260px;
     }
   }
 
