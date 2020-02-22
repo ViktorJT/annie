@@ -27,7 +27,7 @@ const Item = styled.li`
     width: auto;
   }
   a {
-    font-weight: 500;
+    font-weight: 600;
     transition: all 0.2s;
     color: ${props => props.theme.colors.base};
     &:hover {
