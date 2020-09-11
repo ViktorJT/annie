@@ -21,8 +21,11 @@ const Template = ({ children }) => {
       <ThemeProvider theme={theme}>
         <>
           <div className="siteContent">
-            <Menu />
-            {children}
+            // ! uncomment to take back the siteConfig
+            <p>under construction</p> <br />\<p>+31 (0)6 38 33 05 45</p>{' '}
+            <p>amvannoortwijk@gmail.com</p>
+            {/* <Menu /> */}
+            {/* {children} */}
           </div>
           {/* <Footer /> */}
         </>
