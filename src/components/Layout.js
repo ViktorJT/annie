@@ -32,7 +32,6 @@ const Template = ({ children }) => {
                 </p>
               </div>
             </div>
-            // ! uncomment to take back the siteConfig
             {/* <Menu /> */}
             {/* {children} */}
           </div>
