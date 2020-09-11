@@ -2,6 +2,18 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Encode+Sans:300,600&display=swap');
+
+
+
+/* REMOVE THIS BELOW FOR UNDER CONTRUCTION STUFF */
+.uc {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+/* REMOVE THIS ABOVE FOR UNDER CONTRUCTION STUFF */
   
   /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
